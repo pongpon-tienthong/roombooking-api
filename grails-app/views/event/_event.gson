@@ -1,0 +1,10 @@
+import roombooking.api.Event
+
+model {
+	Event event
+}
+
+json {
+	title event.title
+	start event.start.format("yyyy-MM-dd'T'HH:mm:ss")
+}

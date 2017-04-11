@@ -1,0 +1,8 @@
+import roombooking.api.Event
+
+model {
+	Iterable<Event> eventList
+}
+
+json tmpl.event(eventList ?: [])
+
