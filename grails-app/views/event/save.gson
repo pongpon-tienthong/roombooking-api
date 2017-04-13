@@ -1,0 +1,9 @@
+import roombooking.api.Event
+
+model {
+    Event event
+}
+
+json {
+    ThankGod: 'xxxx'
+}

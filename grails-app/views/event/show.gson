@@ -1,7 +1,0 @@
-import roombooking.api.Event
-
-model {
-	Event event
-}
-
-json tmpl.event(event)

@@ -6,8 +6,14 @@ import grails.rest.Resource
 class Event {
 
     String title
-    Integer roomId
+    String description
+    Room room
     Date start
+    Date end
+    String contactName
+    String contactNumber
+    String contactEmail
+
 
     static constraints = {
     }
