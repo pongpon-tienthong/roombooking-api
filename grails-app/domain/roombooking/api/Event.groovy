@@ -23,7 +23,7 @@ class Event {
             this.errors.reject(
                     'default.not.exist.message',
                     ['roomId', 'Event', roomId] as Object[],
-                    '[Property [{0}] of class [{1}] with value [{2}] does not exist]'
+                    'default.not.exist.message'
             )
         }
     }
