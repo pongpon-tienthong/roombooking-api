@@ -4,6 +4,4 @@ model {
     Event event
 }
 
-json {
-    ThankGod: 'xxxx'
-}
+json tmpl.event(event)
