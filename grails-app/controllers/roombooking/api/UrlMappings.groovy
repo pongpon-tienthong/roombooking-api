@@ -3,12 +3,14 @@ package roombooking.api
 class UrlMappings {
 
     static mappings = {
-        delete "/$controller/$id(.$format)?"(action:"delete")
-        get "/$controller(.$format)?"(action:"index")
-        get "/$controller/$id(.$format)?"(action:"show")
-        post "/$controller(.$format)?"(action:"save")
-        put "/$controller/$id(.$format)?"(action:"update")
-        patch "/$controller/$id(.$format)?"(action:"patch")
+        group("/api/v1") {
+            delete  "/$controller/$id?" (action:"delete")
+            get     "/$controller?"     (action:"index")
+            get     "/$controller/$id?" (action:"show")
+            post    "/$controller?"     (action:"save")
+            put     "/$controller/$id?" (action:"update")
+            patch   "/$controller/$id?" (action:"patch")
+        }
 
         "/"(controller: 'application', action:'index')
         "500"(view: '/error')
