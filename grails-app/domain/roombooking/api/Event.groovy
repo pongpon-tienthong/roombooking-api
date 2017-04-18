@@ -28,6 +28,9 @@ class Event {
             )
         }
 
+        /**
+         * Check whether the event is overlapping
+         */
         Event existingEvent = where {
             roomId == this.roomId && start < this.end && end > this.start
         }.find()
