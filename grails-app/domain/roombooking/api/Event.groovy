@@ -23,7 +23,7 @@ class Event {
         if (!Room.exists(this.roomId)) {
             this.errors.reject(
                     'default.not.exist.message',
-                    ['roomId', 'Event', roomId] as Object[],
+                    ['roomId', 'Event', this.roomId] as Object[],
                     'default.not.exist.message'
             )
         }
@@ -35,10 +35,12 @@ class Event {
             roomId == this.roomId && start < this.end && end > this.start
         }.find()
 
+        // TODO: change output error response
         if (existingEvent) {
             this.errors.reject(
                     'event.not.available.message',
-                    [existingEvent.start, existingEvent.end] as Object[],
+                    [existingEvent.start,
+                     existingEvent.end] as Object[],
                     'event.not.available.message'
             )
         }
