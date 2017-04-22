@@ -72,13 +72,13 @@ class RoomSpec extends HibernateSpec {
                     name: "STUB-NAME",
                     capacity: 10,
                     status: "RANDOM-STATUS",
-                    hexColor: "AAAAAA"
+                    btnColor: "AAAAAA"
             )
             room.save()
 
         then: "There is an error and the data is not saved"
             room.hasErrors()
-            room.errors.getFieldError('hexColor')
+            room.errors.getFieldError('btnColor')
             room.count() == 0
     }
 
@@ -88,7 +88,7 @@ class RoomSpec extends HibernateSpec {
                     name: "STUB-NAME",
                     description: "STUB-DESC",
                     capacity: 10,
-                    hexColor: "#FFFFFF"
+                    btnColor: "#FFFFFF"
             )
             room.save()
 
@@ -99,6 +99,6 @@ class RoomSpec extends HibernateSpec {
             savedRoom.description == "STUB-DESC"
             savedRoom.capacity == 10
             savedRoom.status == "active"
-            savedRoom.hexColor == "#FFFFFF"
+            savedRoom.btnColor == "#FFFFFF"
     }
 }

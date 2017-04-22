@@ -1,6 +1,7 @@
-package roombooking.api
+package roombooking.api.controller
 
 import grails.test.mixin.TestFor
+import roombooking.api.EventController
 import spock.lang.Specification
 
 /**

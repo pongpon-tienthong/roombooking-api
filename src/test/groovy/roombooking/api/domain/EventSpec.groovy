@@ -1,6 +1,7 @@
-package roombooking.api
+package roombooking.api.domain
 
 import grails.test.mixin.TestFor
+import roombooking.api.Event
 import spock.lang.Specification
 
 /**
